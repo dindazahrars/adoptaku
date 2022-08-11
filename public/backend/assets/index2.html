@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <div class="p-3">
+                            <form method="POST" action="{{ route('register') }}">
+                            @csrf
+    
+                                <div class="form-group mb-3 row">
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" name="name" required="" placeholder="Name">
+                                    </div>
+                                </div>
+    
+                                <div class="form-group mb-3 row">
+                                    <div class="col-12">
+                                        <input class="form-control" type="email" required="" name="email" placeholder="Email">
+                                    </div>
+                                </div>
+    
+                                <div class="form-group mb-3 row">
+                                    <div class="col-12">
+                                        <input class="form-control" type="password" name="password" required="" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3 row">
+                                    <div class="col-12">
+                                        <input class="form-control" type="password" name="password_confirmation" required="" placeholder="Password_confirmation" required autocomplete="new-password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3 row">
+                                    <div class="col-12">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="form-label ms-1 fw-normal" for="customCheck1">I accept <a href="#" class="text-muted">Terms and Conditions</a></label>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group text-center row mt-3 pt-1">
+                                    <div class="col-12">
+                                        <button class="btn btn-info w-100 waves-effect waves-light" type="submit">Register</button>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group mt-2 mb-0 row">
+                                    <div class="col-12 mt-3 text-center">
+                                        <a href="{{route('login')}}" class="text-muted">Already have account?</a>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
